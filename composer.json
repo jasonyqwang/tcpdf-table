@@ -1,0 +1,16 @@
+{
+    "name": "jsyqw/tcpdf-table",
+    "description": "基于 tcpdf 生成 pdf 表格",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason wang",
+            "email": "1045643440@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "setasign/fpdi": "^2.2"
+    }
+}
