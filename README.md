@@ -64,7 +64,7 @@ $drawContent = new DrawContent($contentData);
 $drawContent->run();
 
 ```
-![图文格式](https://github.com/jasonyqwang/tcpdf-table/blob/master/doc/图文格式.png)
+![图文格式](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/图文格式.png)
 
 ## 2. 纯文字的表数据
 有好几种写法，这里举例，最原始的写法！
@@ -91,8 +91,8 @@ $drawContent->run();
         $drawTable = new DrawTable($tableData);
         $drawTable->drawTable();
 ```
-![纯文字的表数据](https://github.com/jasonyqwang/tcpdf-table/blob/master/doc/table1.png)
-![纯文字的表数据](https://github.com/jasonyqwang/tcpdf-table/blob/master/doc/table2.png)
+![纯文字的表数据](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/table1.png)
+![纯文字的表数据](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/table2.png)
 
 ## 3.图文格式
 ## 3.1 图文格式写法1
@@ -129,7 +129,7 @@ $drawContent->run();
         $drawContent = new DrawContent($contentData);
         $drawContent->run();
 ```
-![](https://github.com/jasonyqwang/tcpdf-table/blob/master/doc/图文格式.png) 
+![](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/图文格式.png) 
  
 ## 3.2 简化的图文格式写法
 ```php
@@ -172,7 +172,7 @@ $drawContent->run();
             $drawContent->draw($this->pdf, $v, 'L', 0);
         }
 ```
-![](https://github.com/jasonyqwang/tcpdf-table/blob/master/doc/图文表格混合格式.png) 
+![](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/图文表格混合格式.png) 
 
 ## 5.文字-图片-表格混合格式
 ```php
@@ -193,7 +193,7 @@ $drawContent->run();
         $drawTable = new DrawTable($tableData);
         $drawTable->run();
 ``` 
-![](https://github.com/jasonyqwang/tcpdf-table/blob/master/doc/文字-图片-表格混合格式.png)    
+![](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/文字-图片-表格混合格式.png)    
     
 # 其他
     
