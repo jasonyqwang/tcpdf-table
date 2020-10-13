@@ -129,7 +129,7 @@ $drawContent->run();
         $drawContent = new DrawContent($contentData);
         $drawContent->run();
 ```
-![](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/图文格式.png) 
+![](https://github.com/jasonyqwang/tcpdf-table/blob/master/docs/简化图文格式.png) 
  
 ## 3.2 简化的图文格式写法
 ```php
