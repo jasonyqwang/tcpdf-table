@@ -18,13 +18,22 @@ class DrawTables
     public $pdf;
     public $header_col_percent;//表头 - 百分比
     public $data_col_percent;//表体 - 百分比
-    public $header_is_border;
-    public $data_is_border;
-    //设置表头边框的颜色
-    public $header_draw_border_color;
-    //设置表体边框的颜色
-    public $data_draw_border_color;
-
+    public $header_style = [
+        'is_border' => true,
+        'fill_title_color' => [0,109,172],//标题背景
+        'draw_border_color' => [0,109,172],//绘图线条颜色
+        'text_title_color' => [255, 255, 255],//文字颜色
+        'font_title_size' => 14,//默认字体大小
+        'fill_color' => [224, 235, 255],//浅蓝色
+        'text_color' => [51,51,51], //#333 深黑
+    ];
+    public $data_style = [
+        'is_border' => true,
+        'draw_border_color' => [204,204,204],//绘图线条颜色
+        'font_size' => 12,//默认字体大小
+        'fill_color' => [224, 235, 255],//浅蓝色
+        'text_color' => [51,51,51], //#333 深黑
+    ];
 
     /**
      * DrawTables constructor.
@@ -48,11 +57,8 @@ class DrawTables
             $tableData = new TableTitleData($this->pdf, $colNum, $this->header_col_percent);
             $tableData->initData($this->data['header']);
             $drawTable = new DrawTableTitle($tableData);
-            if($this->header_is_border !== null){
-                $drawTable->is_border = $this->header_is_border;
-            }
-            if($this->header_draw_border_color !== null){
-                $drawTable->draw_border_color = $this->header_draw_border_color;
+            foreach ($this->header_style as $k => $v){
+                $drawTable->$k = $v;
             }
             $drawTable->run();
         }
@@ -65,11 +71,8 @@ class DrawTables
             if($this->data['header']){
                 $drawTable->first_fill = 0;
             }
-            if($this->data_is_border !== null){
-                $drawTable->is_border = $this->data_is_border;
-            }
-            if($this->data_draw_border_color !== null){
-                $drawTable->draw_border_color = $this->data_draw_border_color;
+            foreach ($this->data_style as $k => $v){
+                $drawTable->$k = $v;
             }
             $drawTable->run();
         }
